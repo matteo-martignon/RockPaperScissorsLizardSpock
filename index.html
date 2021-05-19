@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Rock Paper Scissors Lizard Spock</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+		<script src="webcam.js"></script>
+		<script src="dataset.js"></script>
+	</head>
+	<body>
+		<div>
+			<div>
+				<video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+			</div>
+		</div>
+		<button type="button" id="0" onclick="handleButton(this)">Rock</button>
+		<button type="button" id="1" onclick="handleButton(this)">Paper</button>
+		<button type="button" id="2" onclick="handleButton(this)">Scissors</button>
+		<button type="button" id="3" onclick="handleButton(this)">Lizard</button>
+		<button type="button" id="4" onclick="handleButton(this)">Spock</button>
+		<div id="rocksamples">Rock samples</div>
+		<div id="papersamples">Paper samples</div>
+		<div id="scissorsamples">Scissors samples</div>
+		<div id="lizardsamples">Lizards samples</div>
+		<div id="spocksamples">Spock samples</div>
+		<button type="button" id="train" onclick="doTraining()">Train Network</button>
+		<div id="dummy"> Once train is complete, you can click on 'Stard Predict' to see predictions on screen</div>
+		<button type="button" id="startPredicting" onclick="startPredicting()">Stard Predict</button>
+		<button type="button" id="stopPredicting" onclick="stopPredicting()">Stop Predict</button>
+		<div id="endtrain"></div>
+		<div id="prediction"></div>
+	</body>
+	<script src="utils.js"></script>
+</html>
